@@ -1,0 +1,33 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    background: transparent !important
+  }
+  width: 200px;
+  // top:108px !important;
+  background: transparent !important
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  // top: 108px;
+}
+
+// .card-div{
+//   padding-top: 45px;
+// }
+
+.example-card {
+  position: absolute;
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
