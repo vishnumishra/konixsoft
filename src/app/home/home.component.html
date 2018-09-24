@@ -1,29 +1,20 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+  <mat-sidenav #menu class="sidenav" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
-    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-toolbar class="side-nav-toolbar" color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+
+      <a mat-list-item href="#" *ngFor="let menu of menus">{{menu}}</a>
+
     </mat-nav-list>
   </mat-sidenav>
 
-  <!-- <mat-sidenav #menu class="sidenav" fixedInViewport="false" position="end" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-  [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
-  <mat-toolbar color="primary">Menu</mat-toolbar>
-  <mat-nav-list>
-    <a mat-list-item href="#">Link 1</a>
-    <a mat-list-item href="#">Link 2</a>
-    <a mat-list-item href="#">Link 3</a>
-  </mat-nav-list>
-</mat-sidenav> -->
   <mat-sidenav-content (scroll)="onScroll($event)">
 
     <div>
       <!-- ##### Header Area Start ##### -->
-      
-      <div class="sticky-header" >
+
+      <div class="sticky-header">
         <header class="header-area">
           <!-- Top Header Area -->
           <div class="top-header-area">
@@ -41,40 +32,38 @@
               </div>
             </div>
           </div>
-      
-      
+
+
           <div #mainHeader class="main-header-area">
             <mat-toolbar class="mat-toolbar-area bg-transparent" color="primary">
-              
+
               <mat-toolbar-row>
-      
-                <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
-                  <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-                </button>
-      
-      
-                <a class="navbar-brand" href="#"><img src="../../assets/img/core-img/logo.png" alt=""></a>
-      
-                <!-- spacer -->
-                <span class="spacer"></span>
-      
-                <!-- nav menu -->
-                <a mat-button href="#" *ngIf="!(isHandset$ | async)">COMPANY PROFILE</a>
-                <a mat-button href="#" *ngIf="!(isHandset$ | async)">SERVICES OFFERED</a>
-                <a mat-button href="#" *ngIf="!(isHandset$ | async)">PRODUCTS</a>
-                <a mat-button href="#" *ngIf="!(isHandset$ | async)">ABOUT US</a>
-      
+
                 <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="menu.toggle()" *ngIf="isHandset$ | async">
                   <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
                 </button>
-      
+
+
+                <a class="navbar-brand" matTooltip="Home" href="#"><img src="../../assets/img/core-img/logo.png" alt=""></a>
+
+                <!-- spacer -->
+                <span class="spacer"></span>
+
+                <!-- nav menu -->
+                <li id="techImages" *ngFor="let menu of menus">
+
+                  <a mat-button href="#" *ngIf="!(isHandset$ | async)">{{menu}}</a>
+
+                </li>
+
+
               </mat-toolbar-row>
             </mat-toolbar>
-      
+
           </div>
         </header>
       </div>
-      
+
       <!-- Add Content Here -->
 
       <!-- carousel -->
@@ -82,96 +71,9 @@
         <app-home-carousel></app-home-carousel>
       </div>
 
-      <div class="card-div">
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <div class="card-img-top">
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        </div>
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-          </mat-card-actions>
-        </mat-card>
 
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <div class="card-img-top">
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        </div>
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-          </mat-card-actions>
-        </mat-card>
-
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <div class="card-img-top">
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        </div>
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-          </mat-card-actions>
-        </mat-card>
-
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <div class="card-img-top">
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        </div>
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-          </mat-card-actions>
-        </mat-card>
-      </div>
-      
+      <!-- technologies -->
+      <app-home-technology></app-home-technology>
       
     </div>
 
