@@ -4,7 +4,7 @@
   <div class="tech-img-list" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
     <div class="tech-card-container" *ngFor="let image of technologyImg; index as ind">
 
-      <mat-card #techCard class="tech-mat-card" [ngClass]= "{'shadow-lg p-3 mb-5 rounded':hovering}" (mouseenter)="hovering = true" (mouseleave)="hovering = false">
+      <mat-card #techCard class="tech-mat-card">
         <div class="card-img-container">
 
           <img mat-card-image class="card-img-top tech-img" src="../../assets/img/technologies/{{image}}.png" alt="image">
@@ -12,7 +12,6 @@
         </div>
         
       </mat-card>
-      <p>{{ind}}</p>
 
     </div>
     <br>
