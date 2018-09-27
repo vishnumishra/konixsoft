@@ -6,6 +6,7 @@ import { ServiceOfferedComponent } from './service-offered.component';
   imports: [
     CommonModule
   ],
-  declarations: [ServiceOfferedComponent]
+  declarations: [ServiceOfferedComponent],
+  exports: [ServiceOfferedComponent]
 })
 export class ServiceOfferedModule { }

@@ -1,0 +1,31 @@
+.about-banner {
+  position: relative;
+  top: 45px;
+  background: url(../../assets/img/core-img/company.jpg);
+  width: 100%;
+  height: 600px;
+}
+
+.about-h1 {
+    color: white;
+    top: 31%;
+    left: 12%;
+    right: 12%;
+    bottom: 12%;
+    padding: inherit;
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+}
+
+.about-body{
+    background-color: whitesmoke;
+    top: 45px;
+    position: relative;
+    text-align: center;
+}
+
+.about-body-overview{
+    padding: 5rem !important;
+    margin-bottom: -6rem !important;
+}
