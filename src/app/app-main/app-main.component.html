@@ -1,0 +1,78 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #menu class="sidenav" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async)">
+    <mat-toolbar class="side-nav-toolbar" color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+
+      <a mat-list-item *ngFor="let menu of menus" routerLink="/{{menu}}">{{menu}}</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content (scroll)="onScroll($event)">
+
+    <div>
+      <!-- ##### Header Area Start ##### -->
+
+      <div class="sticky-header">
+        <header class="header-area">
+          <!-- Top Header Area -->
+          <div class="top-header-area">
+            <div class="h-100 d-md-flex justify-content-between align-items-center">
+              <div class="email-address">
+                <a href="mailto:contact@konixsoft.com">contact@konixsoft.com</a>
+              </div>
+              <div class="phone-number d-flex">
+                <div class="icon">
+                  <img src="assets/img/icons/phone-call.png" alt="">
+                </div>
+                <div class="number">
+                  <a href="tel:+91 123 4567891">+91 123 4567891</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div #mainHeader class="main-header-area">
+            <mat-toolbar class="mat-toolbar-area bg-transparent" color="primary">
+
+              <mat-toolbar-row>
+
+                <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="menu.toggle()" *ngIf="isHandset$ | async">
+                  <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+                </button>
+
+
+                <a class="navbar-brand" matTooltip="Home" href=""><img src="../../assets/img/core-img/logo.png" alt=""></a>
+
+                <!-- spacer -->
+                <span class="spacer"></span>
+
+                <!-- nav menu -->
+                <li id="techImages" *ngFor="let menu of menus">
+
+                  <a mat-button routerLink="/{{menu}}" *ngIf="!(isHandset$ | async)">{{menu}}</a>
+
+                </li>
+
+
+              </mat-toolbar-row>
+            </mat-toolbar>
+
+          </div>
+        </header>
+      </div>
+
+      <!-- Add Content Here -->
+
+      <router-outlet></router-outlet>
+
+      <footer class="footer">
+
+      </footer>
+
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

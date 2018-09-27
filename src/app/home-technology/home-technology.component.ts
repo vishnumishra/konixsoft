@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 declare function require(url: string);
 var data = require('../../assets/data/data.json');
 
@@ -10,8 +10,14 @@ var data = require('../../assets/data/data.json');
 export class HomeTechnologyComponent implements OnInit {
 
   technologyImg = data.techImg;
+  bootstrapClass = "tech-mat-card";
+  hover ;
 
-  constructor() { }
+  @ViewChild('techCard') techCard: ElementRef;
+
+  // @HostListener('mouseenter', ['$event'])
+
+  constructor( public el: ElementRef ) { }
 
   ngOnInit() {
   }
