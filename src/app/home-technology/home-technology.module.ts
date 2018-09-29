@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeTechnologyComponent } from './home-technology.component';
+import { HomeTechnologyComponent, DialogOverview } from './home-technology.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
+import { MatDialogModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
-  declarations: [HomeTechnologyComponent],
+  declarations: [HomeTechnologyComponent,DialogOverview],
+  entryComponents:[DialogOverview],
+  
   exports: [HomeTechnologyComponent]
 })
 export class HomeTechnologyModule { }

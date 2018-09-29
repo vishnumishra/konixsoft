@@ -2,7 +2,7 @@
   <mat-sidenav #menu class="sidenav" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async)">
     <mat-toolbar class="side-nav-toolbar" color="primary">Menu</mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list class="menus">
 
       <a mat-list-item *ngFor="let menu of menus" routerLink="/{{menu}}">{{menu}}</a>
 
@@ -27,7 +27,8 @@
                   <img src="assets/img/icons/phone-call.png" alt="">
                 </div>
                 <div class="number">
-                  <a href="tel:+91 123 4567891">+91 123 4567891</a>
+                  <a href="tel:+91 855 3191917">+91 855 3191917</a> /
+                  <a href="tel:+91 701 1650803">+91 701 1650803</a>
                 </div>
               </div>
             </div>
@@ -50,7 +51,7 @@
                 <span class="spacer"></span>
 
                 <!-- nav menu -->
-                <li id="techImages" *ngFor="let menu of menus">
+                <li id="techMenus" class="menus" *ngFor="let menu of menus">
 
                   <a mat-button routerLink="/{{menu}}" *ngIf="!(isHandset$ | async)">{{menu}}</a>
 
@@ -69,7 +70,7 @@
       <router-outlet></router-outlet>
 
       <footer class="footer">
-
+        
       </footer>
 
     </div>
