@@ -1,6 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #menu class="sidenav" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async)">
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <mat-toolbar class="side-nav-toolbar" color="primary">Menu</mat-toolbar>
     <mat-nav-list class="menus">
 
@@ -19,8 +19,14 @@
           <!-- Top Header Area -->
           <div class="top-header-area">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
-              <div class="email-address">
-                <a href="mailto:contact@konixsoft.com">contact@konixsoft.com</a>
+
+              <div class="email-address d-flex">
+                <div class="icon">
+                  <i class="fas fa-envelope fa-lg"></i>
+                </div>
+                <div class="email">
+                  <a href="mailto:contact@konixsoft.com">contact@konixsoft.com</a>
+                </div>
               </div>
               <div class="phone-number d-flex">
                 <div class="icon">
@@ -70,7 +76,7 @@
       <router-outlet></router-outlet>
 
       <footer class="footer">
-        
+
       </footer>
 
     </div>

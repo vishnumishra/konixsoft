@@ -17,21 +17,14 @@
 .tech-img-list {
   flex-wrap: wrap;
   height: inherit;
-  width: 100%;
 }
 
 .tech-card-container {
-  margin-right: auto !important;
-  width: 33%;
-  padding-left: 37px;
   margin-bottom: 2%;
 }
 
 .tech-mat-card {
   background-color: #aca26c;
-  width: 80%;
-  // margin-left: auto;
-  // float: left;
   border-radius: 0.25rem !important;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
@@ -42,9 +35,4 @@
   margin-bottom: 0rem !important;
   box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.275) !important;
   border-radius: 0.5rem !important;
-}
-
-.tech-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
 }
