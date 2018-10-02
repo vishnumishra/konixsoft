@@ -1,7 +1,9 @@
-.konix-slide{
-    position: relative;
-    top: 45px;
+img {
+  height: 620px;
+}
+
+@media only screen and (max-width: 767px) {
+  img {
+    height: 450px;
   }
-img{
-    height: 620px;
 }

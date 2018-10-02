@@ -94,6 +94,11 @@
     }
    
   }
+
+  .sticky-header {
+    position: sticky;
+    top: -90px;
+  }
 }
 
 .top-header-area .email-address a {
@@ -136,7 +141,7 @@
   a {
     color: #ffffff;
     line-height: 45px;
-    font-size: large;
+    font-size: 15px;
   }
 }
 

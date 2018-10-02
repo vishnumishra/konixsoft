@@ -1,6 +1,18 @@
+.carousel {
+  position: relative;
+  top: 45px;
+}
 
+.technology{
+    position: relative;
+    top: 45px;
+}
 
-
-// ::ng-deep .mat-list-item-content{
-//   padding-left: 0 !important;
-// }
+@media only screen and (max-width: 767px) {
+  .carousel {
+    top: 90px;
+  }
+  .technology{
+      top: 90px;
+  }
+}
