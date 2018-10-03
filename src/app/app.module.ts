@@ -8,7 +8,6 @@ import { AppMainModule } from './app-main/app-main.module';
 import { AboutModule } from './about/about.module';
 import { routingModule } from './routing.module';
 import { ServiceOfferedModule } from './service-offered/service-offered.module';
-import { ProductsModule } from './products/products.module';
 import { TeamsModule } from './teams/teams.module';
 
 
@@ -25,7 +24,6 @@ import { TeamsModule } from './teams/teams.module';
     AboutModule,
     routingModule,
     ServiceOfferedModule,
-    ProductsModule,
     TeamsModule
   ],
   providers: [],

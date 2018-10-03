@@ -14,7 +14,7 @@ var data = require('../../assets/data/data.json');
 export class AppMainComponent implements OnInit {
 
   technologyImg = data.techImg;
-  menus = data.menu;
+  menus = data.menus;
 
   @ViewChild('mainHeader') mainHeader: ElementRef;
 

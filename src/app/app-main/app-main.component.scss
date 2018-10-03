@@ -83,24 +83,6 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .top-header-area {
-    height: auto;
-  }
-
-  .top-header-area .email-address {
-    .icon {
-      border-bottom: solid #4d443d;
-    }
-   
-  }
-
-  .sticky-header {
-    position: sticky;
-    top: -90px;
-  }
-}
-
 .top-header-area .email-address a {
   color: #ffffff;
   line-height: 45px;
@@ -166,35 +148,6 @@
   padding: .5em 60px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .main-header-area {
-    height: 70px;
-  }
-
-  .main-header-area .mat-toolbar-area {
-    height: 70px;
-  }
-
-  .side-nav-toolbar {
-    height: 70px !important;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .main-header-area {
-    height: 70px;
-  }
-
-  .main-header-area .mat-toolbar-area {
-    height: 70px;
-    padding: 0.5em 30px;
-  }
-
-  .side-nav-toolbar {
-    height: 70px !important;
-  }
-}
-
 .menus {
   a {
     text-decoration: none;
@@ -211,8 +164,77 @@
 }
 
 .footer {
+  position: relative;
+  top: 45px;
+  padding: 25px;
   width: 100%;
   height: 90px;
   background-color: black;
   color: #ffffff;
+}
+
+.address {
+  padding: 0 30.5px;
+  display: inline-block;
+}
+
+.career {
+  padding: 0 30.5px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 625px) {
+  .career {
+    border-top: 1px solid #737578;
+    padding-top: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-header-area {
+    height: 70px;
+  }
+
+  .main-header-area .mat-toolbar-area {
+    height: 70px;
+  }
+
+  .side-nav-toolbar {
+    height: 70px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .top-header-area {
+    height: auto;
+  }
+
+  .top-header-area .email-address {
+    .icon {
+      border-bottom: solid #4d443d;
+    }
+
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: -90px;
+  }
+
+  .main-header-area {
+    height: 70px;
+  }
+
+  .main-header-area .mat-toolbar-area {
+    height: 70px;
+    padding: 0.5em 30px;
+  }
+
+  .side-nav-toolbar {
+    height: 70px !important;
+  }
+
+  .footer {
+    top: 90px;
+  }
 }

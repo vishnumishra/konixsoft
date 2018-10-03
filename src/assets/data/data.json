@@ -1,4 +1,9 @@
 {
   "techImg": ["angular", "nodejs", "react", "expressjs", "html5", "css3", "bootstrap4", "nginx", "protractor", "aws", "googlecloud", "jasmine", "jenkins", "sails", "testcafe"],
-  "menu": ["SERVICES","PRODUCTS","TEAM","ABOUT"]
+  "menus": [
+            {"menu":"HOME","link":""},
+            {"menu":"SERVICES","link":"/services"},
+            {"menu":"TEAM","link":"/team"},
+            {"menu":"ABOUT","link":"/about"}
+            ]
 }

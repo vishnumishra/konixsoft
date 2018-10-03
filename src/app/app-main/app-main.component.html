@@ -4,7 +4,7 @@
     <mat-toolbar class="side-nav-toolbar" color="primary">Menu</mat-toolbar>
     <mat-nav-list class="menus">
 
-      <a mat-list-item *ngFor="let menu of menus" routerLink="/{{menu}}">{{menu}}</a>
+      <a mat-list-item *ngFor="let menu of menus" routerLink="/{{menu.link}}">{{menu.menu}}</a>
 
     </mat-nav-list>
   </mat-sidenav>
@@ -51,7 +51,8 @@
                 </button>
 
 
-                <a class="navbar-brand" matTooltip="Home" href=""><img src="../../assets/img/core-img/logo.png" alt=""></a>
+                <a class="navbar-brand" matTooltip="Home" routerLink=""><img src="../../assets/img/core-img/logo.png"
+                    alt=""></a>
 
                 <!-- spacer -->
                 <span class="spacer"></span>
@@ -59,7 +60,7 @@
                 <!-- nav menu -->
                 <li id="techMenus" class="menus" *ngFor="let menu of menus">
 
-                  <a mat-button routerLink="/{{menu}}" *ngIf="!(isHandset$ | async)">{{menu}}</a>
+                  <a mat-button routerLink="/{{menu.link}}" *ngIf="!(isHandset$ | async)">{{menu.menu}}</a>
 
                 </li>
 
@@ -76,6 +77,16 @@
       <router-outlet></router-outlet>
 
       <footer class="footer">
+        <div class="d-md-inline-flex">
+          <div class="address">
+            <h5>Address:</h5>
+            <p>#014 Jakkasandra 1st Main,<br> Kormangla 1st Block,<br> Bengaluru 560034</p>
+          </div>
+          <div class="career">
+            <h5>Careers:</h5>
+            <p>Email to: <a href="mailto:contact@konixsoft.com">contact@konixsoft.com</a></p>
+          </div>
+        </div>
 
       </footer>
 
